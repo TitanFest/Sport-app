@@ -1,65 +1,42 @@
 import NavBar from "../Components/NavBar"
-import imagenes from "./Imagenes/imagenes";
+import {Link} from "react-router-dom"
+import DataEquipos from "../Data/DataEquipos";
 import "../Style/Equipos.css"
-const Products = () => {
 
-  const equipos=[
-    {
-      id: 1,
-      Nombre: "Barcelona",
-      imagen: imagenes[0]      
-    },
-
-    {
-      id: 2,
-      Nombre: "Manchester city",
-      imagen: imagenes[1]   
-    },
-
-    {
-      id: 3,
-      Nombre: "Liverpool",
-      imagen: imagenes[2]   
-    }
-  ];
+const Equipos = () => {
   
-
-
   return (
     <>
       <NavBar />
-      <div className="Equipos">
+      <div className="Pagina">
 
-        <h1 id="Titulo">Equipos</h1> 
+        <h1 id="Titulo">Equipos</h1>
 
-        <div className="Secciones"> 
+          <div className="Contenedor">
 
-          <div className="Seccion"> 
+            {DataEquipos.map((equipo) => (
 
-            {equipos.slice(0, 3).map((equipo) => (
-
-              <div key={equipo.id} className="Equipo"> 
+              <div key={equipo.id} className="elements-Equipo">
+                
+                <div className="Logo-equipo">
                 <img src={equipo.imagen} alt={equipo.Nombre + "-img"} className="imagen-equipo" />
+                </div>
+
+                <div className="Nombre-equipo">
                 <p>{equipo.Nombre}</p>
+                </div>
+
+                <Link to={'/EquipoDetalles/'+equipo.id} className="Btn-detalles">
+                  Ver detalles
+                </Link>
+
               </div>
 
             ))}
 
           </div>
-
-          <div className="Seccion"> 
-
-            {equipos.slice(3).map((equipo) => (
-              <div key={equipo.id} className="Equipo"> 
-                <img src={equipo.imagen} alt={equipo.Nombre + "-img"} className="imagen-equipo" />
-                <p>{equipo.Nombre}</p>
-
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </>);
 };
-  export default Products;
+  export default Equipos;
   

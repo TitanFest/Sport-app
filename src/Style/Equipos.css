@@ -1,59 +1,56 @@
-.Equipos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  
-  #Titulo {
-    margin-top: 20px;
-    margin-bottom: 40px;
-    text-align: center; 
-  }
-  
-  .Secciones {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: space-around;
-    width: 100%;
-    
-  }
-  
+.Pagina {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
 
-  .Seccion {
-    display: flex; 
-    flex-direction: row; 
-    width: 50%; 
-    margin: 20px 0; 
-    padding: 20px; 
-    border-radius: 10px; 
-    
+.Contenedor {
+  display: grid;
+  flex-wrap: wrap;
   }
-  
-  
-  .Equipo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 33.33%; 
-    margin: 10px 20px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  
-  .Equipo p {
-    color: rgb(0, 0, 0);
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .Equipo img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
+
+.elements-Equipo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10%;
+  height: 40%;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-equipo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Nombre del equipo */
+.Nombre-equipo {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+.Btn-detalles {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Btn-detalles:hover {
+  background-color: #0056b3;
+}
+
+
   
   
   
