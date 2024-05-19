@@ -17,7 +17,7 @@ const About = () => {
               <div className="elments-evento">
 
                 <div className="Horario">
-                  {ev.Hora + ev.Fecha}
+                  {ev.Hora + "-" +ev.Fecha}
                 </div>
 
                 <div className="local">
